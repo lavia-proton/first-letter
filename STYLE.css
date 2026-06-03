@@ -1,0 +1,175 @@
+/* Global Reset and Font Setup */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Instrument Serif', serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* ==========================================================================
+   LOG-IN PAGE STYLES
+   ========================================================================== */
+.login-body {
+    background-color: #212842; /* Base color 100% visible */
+    position: relative;
+    width: 100%;
+}
+
+/* Handles image overlay at exactly 50% visibility */
+.login-body::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: url('SEA-GREEN.webp') no-repeat center center/cover;
+    opacity: 0.50;
+    z-index: -1;
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.login-text {
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: #FDFDF1; /* 100% visible cream text */
+    margin-bottom: 30px;
+}
+
+/* Elegant sleek line input for the password */
+#passwordInput {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(253, 253, 241, 0.6); /* FDFDF1 at 60% */
+    color: #FDFDF1;
+    font-family: 'Instrument Serif', serif;
+    font-size: 1.3rem;
+    text-align: center;
+    padding: 8px;
+    margin-bottom: 40px;
+    outline: none;
+    width: 80%;
+}
+
+#passwordInput::placeholder {
+    color: rgba(253, 253, 241, 0.4);
+    font-style: italic;
+}
+
+/* The Figma Pill Buttons */
+.pill-button {
+    background-color: rgba(253, 253, 241, 0.6); /* FDFDF1 at 60% visible */
+    color: #212842; /* Text color */
+    border: none;
+    font-family: 'Instrument Serif', serif;
+    font-size: 1.6rem;
+    padding: 10px 45px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.pill-button:hover {
+    background-color: #FDFDF1; /* Becomes 100% visible on hover */
+}
+
+/* ==========================================================================
+   MAIN PAGE STYLES
+   ========================================================================== */
+.main-body {
+    background-color: #6A7B6D; /* Base color 100% visible */
+    position: relative;
+    width: 100%;
+}
+
+/* Handles image overlay at exactly 35% visibility */
+.main-body::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: url('seagreen.jpg') no-repeat center center/cover;
+    opacity: 0.35;
+    z-index: -1;
+}
+
+/* Constrains content into a perfect phone view frame matching your flow */
+.mobile-frame {
+    width: 100%;
+    max-width: 412px;
+    min-height: 100vh;
+    padding: 30px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.top-navigation {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 30px;
+}
+
+.back-link {
+    text-decoration: none;
+    display: inline-block;
+    padding: 6px 30px;
+    font-size: 1.3rem;
+}
+
+/* Character Cards Container */
+.avatar-section {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 35px;
+    width: 100%;
+}
+
+.character-card {
+    text-align: center;
+    color: #FDFDF1;
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+.character-img {
+    width: 85px;
+    height: auto;
+    display: block;
+    margin: 0 auto 8px auto;
+}
+
+.character-card p:last-child {
+    font-size: 0.85rem;
+    margin-top: 2px;
+}
+
+/* The Framed Letter Box Container */
+.letter-wrapper {
+    width: 100%;
+    background-color: rgba(253, 253, 241, 0.6); /* FDFDF1 at 60% visibility */
+    border-radius: 24px;
+    padding: 35px 25px;
+    min-height: 450px;
+    color: #212842; /* Text color inside letter */
+    font-size: 1.35rem;
+    line-height: 1.6;
+    overflow-y: auto;
+    box-shadow: 0 8px 32px rgba(33, 40, 66, 0.05);
+}
